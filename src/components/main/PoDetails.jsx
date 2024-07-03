@@ -1,7 +1,19 @@
 import { LinkOutlined } from '@ant-design/icons';
-import { Button, Card, Col, Divider, Empty, Form, Input, Row, Segmented, Table, Tabs } from 'antd';
+import {
+    Button,
+    Card,
+    Col,
+    Divider,
+    Form,
+    Input,
+    Row,
+    Segmented,
+    Table,
+    Tabs,
+} from 'antd';
 import { useEffect } from 'react';
 import { tableColumns, tableData } from '../../utils/constants';
+import { Attachments, TermsAndCondition, Editor } from '../../';
 
 const tabItems = [
     {
@@ -12,17 +24,17 @@ const tabItems = [
     {
         key: '2',
         label: 'Attachments',
-        children: <Empty />,
+        children: <Attachments />,
     },
     {
         key: '3',
         label: 'Terms and Conditions',
-        children: <Empty />,
+        children: <TermsAndCondition />,
     },
     {
         key: '4',
         label: 'Additional Information',
-        children: <Empty />,
+        children: <Editor />,
     },
 ];
 
@@ -40,7 +52,7 @@ const PoDetails = () => {
             company: 'Parsian - Reichert',
             address: '1234 Park Avenue, Mumbai Maharashtra 400001',
         });
-    }, []);
+    }, [vendorForm, shipform]);
 
     return (
         <Card>
@@ -76,16 +88,14 @@ const PoDetails = () => {
                 </Col>
                 <Col xs={12}>
                     <Card className='bg-blue-50'>
-                       <div className="flex justify-between items-center">
-                       <h2 className='text-xl font-bold mb-6'>Ship To</h2>
-                       <Button type='text' className='text-purple-600 hover:text-purple-800'>Update Information <LinkOutlined /></Button>
-                       </div>
+                        <div className='flex justify-between items-center'>
+                            <h2 className='text-xl font-bold mb-6'>Ship To</h2>
+                            <Button type='link' className='underline'>
+                                Update Information <LinkOutlined />
+                            </Button>
+                        </div>
                         {/* form */}
-                        <Form
-                            form={shipform}
-                            name='generalInfo'
-                            layout='vertical'
-                        >
+                        <Form form={shipform} name='shipForm' layout='vertical'>
                             <Form.Item label='Company Name' name='company'>
                                 <Input readOnly />
                             </Form.Item>

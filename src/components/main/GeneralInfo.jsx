@@ -7,7 +7,7 @@ const GeneralInfo = () => {
     useState(() => {
         generalForm.setFieldsValue({
             pon: 'PO-20311',
-            pod: '16/092023',
+            pod: '16/09/2023',
             dd: '24/10/2023',
             status: 'draft',
         });

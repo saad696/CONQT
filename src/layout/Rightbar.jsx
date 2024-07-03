@@ -35,8 +35,16 @@ const Rightbar = () => {
 
     return (
         <>
-            <Card title={<h2>Other Details</h2>} styles={{body: {padding: '0 18px 18px 18px'}}}>
-                <Tabs defaultActiveKey='1' items={tabItems} />
+            <Card styles={{ body: { padding: 0 } }}>
+                <div className='border-b-[1px] one-edge-shadow'>
+                    <h2 className='text-xl font-bold p-4 rounded-none'>
+                        PO Details
+                    </h2>
+                </div>
+
+                <div className='p-4 pt-0'>
+                    <Tabs defaultActiveKey='1' items={tabItems} />
+                </div>
             </Card>
         </>
     );
