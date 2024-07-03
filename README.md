@@ -1,8 +1,22 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# CONQT Dashboard
 
-Currently, two official plugins are available:
+A Dashboard created using React v18, Ant design, Tailwind.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+![Logo](https://i.ibb.co/bKPJHhV/Screenshot-2024-07-03-233810.png)
+
+
+## How to start
+
+- Clone the project
+- `npm i` in your local machine. To install all the required dependencies.
+- `npm run dev` to start the project
+
+
+## Tech Stack
+
+**Client:** React, Ant Design, TailwindCSS
+
